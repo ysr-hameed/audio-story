@@ -259,17 +259,26 @@ After all files are ready, run from project root:
 
 ---
 
-## SECTION 1: LANGUAGE RULES (MANDATORY)
+## SECTION 1: LANGUAGE RULES — NARRATOR STYLE (MANDATORY)
+
+**CRITICAL: Story must be in FIRST-PERSON ("मैं") narration.** The narrator is the main character telling their own story. Not a neutral third-person observer.
 
 | Rule | ✅ Correct | ❌ Incorrect |
 |------|-----------|-------------|
-| Modern Hindi — not bookish, not rural | "उसने कहा" | "उसने कथित" |
-| Short sentences — max 15-20 words | "रात के दस बज रहे थे। कोहरा घना था।" | Long chains with "और/जो" |
+| **First-person narration** | "मैंने देखा", "मुझे लगा", "मेरे होश उड़ गए" | "आदित्य ने देखा", "उसे लगा" |
+| **Conversational flow** — comma-joined clauses | "मैं उस चिट्ठी को लेकर घर आया, सोफे पर बैठा, और धीरे-धीरे उसे खोलने लगा।" | Overly chopped "मैं उठा। मैं बैठा। मैंने खोला।" |
+| **Internal monologue** | "मैं सोच रहा था — यह कोई मजाक तो नहीं?" | "उसने सोचा कि यह मजाक हो सकता है।" |
+| **Emotional reactions shown** | "मेरे तो होश उड़ गए। मैं जवाब देता तो क्या देता?" | "वह हैरान था और उसे कोई जवाब नहीं मिला।" |
+| Everyday speech patterns | "अरे यार", "हे भगवान", "पता नहीं क्यों" | Pure bookish Hindi |
 | Simple words — no Sanskrit | "बहुत", "लेकिन", "इसलिए" | "अत्यंत", "किंतु", "अतः" |
-| Common English words OK | फ़ोन, कार, ऑफिस, रिपोर्ट | Unnecessary English |
-| Urdu-mixed words fine | खून, सबूत, कत्ल, बयान | Overly Persian |
-| Every sentence must have a verb | "वह मेज़ पर बैठा था।" | "पतला। छोटा कद।" (fragment) |
-| One idea per sentence | Short clear sentences | Multiple ideas crammed |
+| Urdu-mixed words natural | खून, सबूत, कत्ल, बयान, गुंजाइश, बेदर्दी | Overly Persian or pure Sanskrit |
+| Common English words OK | फ़ोन, कार, ऑफिस, रिपोर्ट, वेबसाइट, इंटरनेट | — |
+
+**Sentence structure:**
+- No strict word limit. Sentences can be 10-40 words like natural speech.
+- Use commas (,) to connect related thoughts — like a person talking.
+- Period (।) for complete thoughts. Comma for continuing thoughts.
+- NEVER use fragment chains ("पतला। छोटा कद।") — every sentence needs a verb.
 
 **Words to AVOID:**
 ```
@@ -278,27 +287,34 @@ After all files are ready, run from project root:
 ❌ परन्तु → ✅ लेकिन           ❌ अतः → ✅ इसलिए
 ❌ किंतु → ✅ मगर              ❌ अत्यंत → ✅ बहुत
 ❌ पुनः → ✅ फिर से           ❌ निकट → ✅ पास
+❌ उपस्थित → ✅ मौजूद/था       ❌ कथित → ✅ कहा
 ```
 
 ---
 
 ## SECTION 2: TTS RULES (MANDATORY)
 
-### 2.1 Sentence Structure
+### 2.1 Sentence Structure — Conversational Flow
 
-- Max 15-20 words per sentence
-- One thought per sentence — don't chain with "और/जो/क्योंकि"
-- 10-12 words ideal for TTS
+**TTS reads conversational Hindi best when it sounds like a real person talking.** The key is natural rhythm, not short sentences.
 
-✅ **Correct:**
+✅ **Natural conversational rhythm (reference style):**
+```
+मैं उस चिट्ठी को उठाकर घर के अंदर ले आया, सोफे पर बैठा, और धीरे-धीरे उसे खोलने लगा — मुझे बड़ी खुशी हो रही थी, पुराने दिन याद आने लगे थे।
+पता नहीं क्यों, लेकिन मुझे लग रहा था कि यह कोई मजाक नहीं है। मैं सोच में पड़ गया — अब क्या करूं?
+```
+
+**Rules:**
+- **Comma (,) for continuing thoughts** — connects related clauses like real speech
+- **Period (।) for complete stops** — when topic or thought changes
+- **Dash (—) for dramatic pause** — TTS will slow down naturally
+- **No strict word limit** — sentences can be 10-40 words, whatever feels natural
+- **Read aloud test** — if it sounds like someone telling a story, it's correct
+
+❌ **Too chopped (robot-like TTS):**
 ```
 रात के दस बज रहे थे। सड़क पर सन्नाटा था।
 एक कार धीरे-धीरे आ रही थी। उसकी हेडलाइट्स बंद थीं।
-```
-
-❌ **Incorrect:**
-```
-रात के दस बज रहे थे और सड़क पर सन्नाटा था जब एक कार आ रही थी जिसकी हेडलाइट्स बंद थीं।
 ```
 
 ### 2.2 Punctuation
@@ -327,9 +343,39 @@ After all files are ready, run from project root:
 - 3+ letter names preferred (TTS reads better)
 - Avoid similar sounding names (TTS may confuse)
 
-### 2.5 Fragment Avoidance (CRITICAL)
+### 2.5 Dialogue Trap — Short Q&A (CRITICAL for Neutral TTS)
 
-**Problem:** Multiple fragments together = TTS reads as word-list, no flow.
+**Problem:** Neutral TTS (Piper, etc.) reads short Q&A like a robot — word-by-word, same tone.
+
+❌ **Bad for TTS — every line sounds identical:**
+```
+"तुमने हत्या की?"
+"हाँ।"
+"किसकी?"
+"अपनी पत्नी की।"
+```
+
+✅ **Fix — add action/emotion words BEFORE or BETWEEN:**
+```
+इंस्पेक्टर ने मुझे घूरा — उसकी आँखों में शक और हैरानी दोनों थी। "तुमने हत्या की?"
+मैंने सिर नीचे कर लिया। मेरी आवाज़ बाहर निकली तो बहुत धीमी थी। "हाँ।"
+वह चुप रहा। फिर उसने पूछा — इस बार आवाज़ और सख्त। "किसकी?"
+मैं उसकी आँखों में नहीं देख पा रहा था। मैंने फुसफुसाते हुए कहा, "अपनी पत्नी की।"
+```
+
+**Rule:** Every dialogue line must have at least one of:
+- Attribution BEFORE quote: `इंस्पेक्टर ने पूछा, "क्या?"`
+- Action beat: `मैंने सिर नीचे कर लिया। "हाँ।"`
+- Emotion word: `"हाँ," मैंने धीमी आवाज़ में कहा।`
+- Physical description: `उसकी आँखों में शक था। "क्या?"`
+
+**Never write dialogue like a script:**
+```
+A: "क्या?"
+B: "हाँ।"
+```
+
+### 2.6 Fragment Avoidance (CRITICAL)
 
 ❌ **Common fragments:**
 ```
@@ -544,16 +590,16 @@ No police stories. No investigative procedurals. People in India don't enjoy pol
 
 ## SECTION 8: ANTI-AI RULES — MAKE IT FEEL HUMAN
 
-### 8.1 Opening Rules
+### 8.1 Opening Rules — First-Person
 
 **NEVER start with time + location + character description.**
 
-| ❌ AI Opening | ✅ Human Opening |
+| ❌ AI Opening | ✅ Human First-Person Opening |
 |-------------|----------------|
-| "रात के दस बज रहे थे। दिल्ली की एक बिल्डिंग में..." | "मैंने अपनी पत्नी को मार डाला," विक्रम ने कहा। |
-| "सुबह के सात बज रहे थे। कोहरा था..." | दरवाज़ा खुला तो वहाँ कोई नहीं था। लेकिन घंटी तो किसी ने बजाई थी। |
+| "रात के दस बज रहे थे। दिल्ली की एक बिल्डिंग में..." | "मैंने सोचा था कि यह एक आम दिन होगा। लेकिन उस दिन कुछ ऐसा हुआ जिसने मेरी ज़िंदगी बदल दी।" |
+| "आदित्य रावत ने पुलिस स्टेशन में कदम रखा..." | "जब मैंने पुलिस स्टेशन के अंदर कदम रखा, मेरे हाथ काँप रहे थे। मुझे खुद नहीं पता था कि मैं सच बोल रहा हूं या झूठ।" |
 
-**Rule:** First line = a question or hook. Reader NEEDS the second line.
+**Rule:** First line = personal thought, confession, or question that makes the listener NEED the second line. Start in the middle of the action, not at the beginning.
 
 ### 8.2 Character Description Rules
 
@@ -575,15 +621,24 @@ No police stories. No investigative procedurals. People in India don't enjoy pol
 | Every line drives plot | Some casual talk — "चाय पी लो पहले।" |
 | No interruptions | "लेकिन मैं..." "लेकिन कुछ नहीं," उसने काटा। |
 
-### 8.4 Narrator Voice Rules
+### 8.4 Narrator Voice Rules — FIRST PERSON STYLE
 
-Narrator must have personality. AI narrators are neutral and boring.
+**The narrator IS the main character.** They tell their own story in their own voice.
 
-| AI Narrator | Human Narrator |
+| AI-Style (❌) | Human First-Person (✅) |
 |------------|---------------|
-| "वह कमरे में दाखिल हुआ। मेज़ पर एक किताब थी।" | "किताब वहाँ थी। जहाँ होनी चाहिए थी। लेकिन उसे खोलने से पहले ही पता था — यह कोई आम किताब नहीं थी।" |
-| Always objective | Has opinions, uses Hindi idioms |
-| No sarcasm | "पुलिस ने केस बंद कर दिया। क्योंकि पुलिस का काम केस बंद करना है, केस सॉल्व करना नहीं।" |
+| "वह कमरे में दाखिल हुआ। मेज़ पर एक किताब थी।" | "जब मैं उस कमरे में दाखिल हुआ, तो मेज़ पर एक किताब रखी थी। मैंने उसे उठाया और पलटा — और मेरे हाथ काँपने लगे।" |
+| Neutral observer | Shares thoughts, doubts, feelings in real-time |
+| No emotions | "मुझे बड़ी खुशी हुई", "मेरे तो होश उड़ गए", "मैं हैरान हो गया" |
+| No self-doubt | "पता नहीं क्यों", "शायद", "मुझे लगा", "मैं सोच में पड़ गया" |
+| Perfect memory | "ठीक से याद नहीं", "शायद उसी दिन की बात है" |
+
+**Key first-person patterns:**
+- मैंने [क्रिया] — "मैंने उस चिट्ठी को उठाया"
+- मुझे [भाव] — "मुझे बड़ी खुशी हुई"
+- मेरा/मेरी/मेरे — "मेरे तो होश उड़ गए"
+- मैं सोच रहा था — "मैं मन ही मन सोच रहा था"
+- पता नहीं — "पता नहीं क्यों लोगों को कागज से दुश्मनी सी हो गई है"
 
 ### 8.5 Hidden AI Mistakes
 
@@ -636,33 +691,55 @@ Narrator must have personality. AI narrators are neutral and boring.
 - Include hesitation, interruptions, casual talk
 - No two characters should sound identical
 
+### 9.5 CRITICAL: Fixing Short Q&A for Neutral TTS
+
+**Problem:** Piper and similar TTS can't express emotion. Short lines get same robotic tone.
+
+**Fix — Embed emotion into narration, not just dialogue:**
+
+| ❌ Robotic (TTS can't express) | ✅ Human (narration carries emotion) |
+|-------------------------------|--------------------------------------|
+| "कहाँ हो तुम?" "यहाँ।" "क्यों?" | उसने गुस्से में पूछा, "कहाँ हो तुम?" मैंने डरते हुए कहा, "यहाँ।" उसकी आवाज़ और तेज़ हो गई, "क्यों?" |
+| "क्या हुआ?" "कुछ नहीं।" "झूठ मत बोलो।" | उसने मेरा हाथ पकड़ लिया। "क्या हुआ?" मैंने उसकी आँखों में देखा — "कुछ नहीं।" उसने मेरा चेहरा पकड़ा, "झूठ मत बोलो।" |
+| "कौन है?" "मैं हूं।" "कौन?" | अंधेरे में एक आवाज़ आई। मैं चौंक गया — "कौन है?" आवाज़ ने जवाब दिया, "मैं हूं।" मेरे हाथ काँप गए — "कौन?" |
+
+**Golden rule:** If the dialogue line is under 5 words WITHOUT narration — add narration. Every time.
+
 ---
 
 ## SECTION 10: SCENE DESCRIPTION
 
-### 10.1 The 5 Senses
+### 10.1 The 6 Senses (Add Internal)
 
-Every scene: include 2-3 of these.
+Every scene: include 2-3 external + the **internal** sense.
 
 | Sense | Examples |
 |-------|----------|
-| देखना | Place, light, colors |
-| सुनना | Sounds, silence |
-| महसूस करना | Cold, fear, unease |
-| सूंघना | Smell, odor |
-| समय | Morning/evening, weather |
+| 👁 देखना | Place, light, colors, objects |
+| 👂 सुनना | Sounds, silence, voices |
+| ✋ महसूस करना | Cold, warmth, touch, pressure |
+| 👃 सूंघना | Smell, odor, fragrance |
+| 🌤 समय/मौसम | Morning/evening, weather, season |
+| 💭 **INTERNAL** | What the character is THINKING + FEELING |
 
-### 10.2 Description Formula
+### 10.2 Description Formula — First-Person
 
 ```
-[Time/Weather] + [Place] + [Atmosphere] + [Character State]
+[What I saw/felt] + [What I thought] + [How I reacted]
 ```
 
-**Example:**
+**Example (correct first-person style):**
 ```
-सर्दियों की वो सुबह थी। कोहरा इतना घना था कि दस फुट दूर कुछ दिखता नहीं था।
-वह अपनी कार से उतरा। ठंड से सिकुड़ गया था।
+सर्दियों की वो सुबह थी — कोहरा इतना घना कि दस फुट दूर कुछ दिखता नहीं था।
+मैं अपनी कार से उतरा। ठंड से मेरा पूरा बदन सिकुड़ गया था।
+मैं सोच रहा था — क्या सच में यहाँ कोई रहता है? या मैं बेवजह यहाँ आ गया हूं?
 ```
+
+**Every scene must include:**
+1. What the character SEES physically
+2. What the character FEELS emotionally
+3. What the character THINKS (internal monologue)
+4. How the character REACTS (body, voice, action)
 
 ---
 
@@ -762,21 +839,25 @@ When character moves: state travel time AND what others did during.
 
 | Rule | How |
 |------|-----|
-| First 100 words: NO time/location | Start with dialogue, action, question |
+| First 100 words: NO time/location | Start with personal thought, confession, question |
+| First-person hook | "मैंने सोचा था यह एक आम चिट्ठी है, लेकिन..." |
 | Every scene = mini-movie | Visual + emotional + question hook |
-| 2-4 line paragraphs | Mobile-friendly |
-| Every chapter = cliffhanger | Last line = unanswered question |
-| Something unexpected every 1,000 words | New detail, shift, twist |
-| Show emotions, don't explain | "हाथ काँप रहे थे" NOT "वह डरा हुआ था" |
+| Internal monologue every 300-500 words | "मैं सोच रहा था...", "मुझे लगा..." |
+| Every chapter = cliffhanger | Last line = unanswered question or doubt |
+| Something unexpected every ~1,000 words | New detail, shift, twist |
+| Show emotions through reaction | "मेरे तो होश उड़ गए" NOT "वह हैरान था" |
+| Use natural Hindi idioms | "फूला नहीं समा रहा था", "मन ठहरा ठहरा" |
 
-### 14.2 Modern Hindi
+### 14.2 Modern Hindi — Conversational Style
 
 | ❌ Avoid | ✅ Use |
 |---------|-------|
 | निकट, उपस्थित, किंतु, अतः | पास, है/था, लेकिन, इसलिए |
-| Pure Sanskrit Hindi | Natural Urdu-mixed Hindi |
-| "ने कहा" every time | Varied — बोला, बताया, पूछा |
-| Robot Hindi | "वह वहीं खड़ा रह गया।" |
+| Pure Sanskrit Hindi | Natural Urdu-mixed Hindi — कत्ल, सबूत, गुंजाइश |
+| Neutral reporting | Personal reaction — "हैरान हो गया", "होश उड़ गए" |
+| Robot Hindi | Natural flow — "मैं सोच रहा हूं कि...", "पता नहीं क्यों..." |
+| Third-person always | Mix first-person + reactions |
+| "ने कहा" every time | Varied — बोला, बताया, पूछा, चिल्लाया |
 
 ---
 
@@ -784,14 +865,14 @@ When character moves: state travel time AND what others did during.
 
 Pick ONE from each category. Track what's used. Never repeat same combo.
 
-### 15.1 Opening Type
+### 15.1 Opening Type (First-Person)
 
-1. **Dialogue** — "मैंने अपनी पत्नी को मार डाला," उसने कहा।
-2. **Action** — दरवाज़ा खुला। सामने कोई नहीं था। लेकिन घंटी किसी ने बजाई थी।
-3. **Question** — तीन दिन हो गए थे। कोई जवाब नहीं आया था।
-4. **Unusual detail** — अजीब बात यह थी कि तस्वीर में वह औरत अब नहीं थी।
-5. **Emotional** — उसे ऐसा लग रहा था जैसे कोई उसे देख रहा है।
-6. **Mid-scene** — वह बैठा रहा। बहुत देर तक। फिर उसने फोन उठाया।
+1. **Personal confession** — "मैंने सोचा था यह एक आम दिन होगा, लेकिन उस दिन कुछ ऐसा हुआ जिसने मेरी ज़िंदगी बदल दी।"
+2. **Action (first-person)** — "जब मैंने दरवाज़ा खोला, सामने कोई नहीं था। लेकिन घंटी तो किसी ने बजाई थी। मैं हैरान हो गया।"
+3. **Internal question** — "मैं सोच रहा था — तीन दिन हो गए, कोई जवाब क्यों नहीं आया? मेरा दिमाग तरह-तरह के ख्यालों में खोया हुआ था।"
+4. **Unusual detail** — "सबसे अजीब बात यह थी कि तस्वीर में वह औरत अब नहीं थी। मैंने अपनी आँखें मलीं — लेकिन वह सच में गायब थी।"
+5. **Emotional (first-person)** — "मुझे ऐसा लग रहा था जैसे कोई मुझे देख रहा है। मैंने चारों तरफ देखा — कोई नहीं था। फिर भी, वह एहसास नहीं जा रहा था।"
+6. **Mid-thought** — "मैं बहुत देर तक वहीं बैठा रहा। सोचता रहा — यह सब कैसे हुआ? फिर मैंने फोन उठाया और वह नंबर मिलाया।"
 
 ### 15.2 Concept Type
 
@@ -845,12 +926,15 @@ Pick ONE from each category. Track what's used. Never repeat same combo.
 
 ## SECTION 17: FINAL CHECKLIST
 
-### Core Rules
-- [ ] Every sentence under 20 words
+### Core Rules — Narration Style
+- [ ] FIRST-PERSON narration ("मैं") — NOT third-person
+- [ ] Conversational flow — comma-joined clauses OK, no strict word limit
 - [ ] Every sentence has a verb (no fragments)
+- [ ] Internal monologue present — "मैं सोच रहा था", "मुझे लगा"
+- [ ] Emotional reactions shown — "होश उड़ गए", "हैरान हो गया"
+- [ ] Natural Hindi idioms — फूला नहीं समाया, मन ठहरा ठहरा
 - [ ] No bookish Hindi (किंतु, अतः, पुनः)
-- [ ] Dialogue attribution BEFORE the quote
-- [ ] Every dialogue identifies the speaker
+- [ ] Dialogue attribution BEFORE the quote (for TTS)
 - [ ] Output = ONLY story text
 
 ### Story
@@ -862,16 +946,19 @@ Pick ONE from each category. Track what's used. Never repeat same combo.
 - [ ] Every chapter ends on cliffhanger or question
 - [ ] Something unexpected every ~1,000 words
 
-### Anti-AI
+### Anti-AI — First-Person
+- [ ] FIRST-PERSON narration throughout ("मैंने", "मुझे", "मेरा")
 - [ ] Story does NOT start with time + location + description
-- [ ] Character descriptions NOT fragment chains
-- [ ] Every character speaks differently
-- [ ] Narrator has personality (opinions, idioms)
-- [ ] Imperfect — things fail, characters hesitate
+- [ ] Internal monologue every 300-500 words — "मैं सोच रहा था..."
+- [ ] Emotional reactions shown — "होश उड़ गए", "हैरान हो गया", "फूला नहीं समाया"
+- [ ] Authentic Hindi idioms used naturally
+- [ ] Characters speak differently from narrator
+- [ ] Narrator has personality (opinions, self-doubt, excitement)
+- [ ] Imperfect — things fail, narrator hesitates, gets confused
 - [ ] Silence exists — not every moment is filled
-- [ ] Emotions are SHOWN, not EXPLAINED
+- [ ] Emotions are SHOWN through reaction, not explained
 - [ ] At least one unique metaphor or sensory detail
-- [ ] A character forgets or misremembers something
+- [ ] Narrator forgets or misremembers something
 
 ### 2026 Rules
 - [ ] First 100 words = NO time/location
@@ -893,3 +980,73 @@ Pick ONE from each category. Track what's used. Never repeat same combo.
 
 ### Final Test
 - [ ] If this were a book — would someone believe a human wrote it?
+
+---
+
+## SECTION 18: TOPIC ENGAGEMENT — WHAT MAKES A STORY HOOK STRONG
+
+### 18.1 The "Example Story" Formula
+
+The example story (writer receiving mysterious pages from an unknown author) works because:
+
+| Factor | Why It Works |
+|--------|-------------|
+| **Universal relatability** | Everyone has struggled, wanted success, faced temptation |
+| **Unique premise** | "Someone is writing FOR me" — not "I found a diary" or "I saw a ghost" |
+| **Active protagonist** | Writer makes choices (publish, hide truth, investigate) — things HAPPEN because of his decisions |
+| **Moral dilemma** | Should he take credit? Should he stop? Can he afford to? |
+| **Escalating stakes** | Starts with curiosity → success → police → life danger |
+| **Fiction becomes real** | The story he's posting matches real crimes — best kind of suspense |
+| **Mystery with payoff** | Every chapter answers some questions, raises new ones |
+
+### 18.2 High-Engagement vs Low-Engagement Topics
+
+| High Engagement (✅) | Low Engagement (❌) |
+|---------------------|-------------------|
+| "Someone is writing stories for me — and they're real crimes" | "I found a haunted house" |
+| "My dead wife sends me texts from her phone" | "My wife is missing" |
+| "My own reflection doesn't match my movements" | "I saw a ghost" |
+| "A stranger knows everything about me" | "I have a dark secret" |
+| "I keep living the same day — but each time it's slightly different" | "There's a murderer in my town" |
+
+**Rule:** The best hook = a familiar situation + ONE impossible element that breaks reality. Everyman protagonist + impossible event = instant engagement.
+
+### 18.3 Topic Testing Checklist
+
+Before writing a story, ask:
+- [ ] Is the premise UNIQUE? (not recycled from common horror/mystery)
+- [ ] Does the protagonist ACTIVE? (things happen because of their choices)
+- [ ] Is there a MORAL DILEMMA? (right vs wrong, easy vs hard)
+- [ ] Do stakes ESCALATE? (personal → social → life-threatening)
+- [ ] Is there a MYSTERY with layers? (each answer reveals deeper question)
+- [ ] Would I want to hear the NEXT sentence? (if no — concept is weak)
+
+### 18.4 Opening Hook Types (Ranked by Engagement)
+
+| Rank | Type | Example |
+|------|------|---------|
+| 1 | **Impossible situation** | "मैंने अपनी मृत पत्नी का फोन उठाया — वह बोल रही थी।" |
+| 2 | **Moral confession** | "मैंने वह कहानी अपने नाम से छाप दी। मुझे पता था यह गलत है, लेकिन..." |
+| 3 | **Reality break** | "मेरी तस्वीर में मैं नहीं था। और तस्वीर तो अभी ली थी।" |
+| 4 | **Urgent question** | "अगर कल तुम्हें पता चले कि तुम कल मर जाओगे — तो आज क्या करोगे?" |
+
+**Never use:** "एक गाँव में..." "बहुत समय पहले..." "एक आदमी था..."
+
+### 18.5 How to Design a Hook (Step-by-Step)
+
+1. Take a NORMAL situation (job, home, relationship, daily routine)
+2. Add ONE impossible element (phone from dead person, story predicting future, reflection moves differently)
+3. Make the protagonist try to LIVE NORMALLY despite it (denial phase)
+4. Force them to ACT when denial fails
+5. Each action reveals a DEEPER layer of the mystery
+6. End with a CHOICE that has no good answer (moral dilemma)
+
+**Example applied:**
+- Normal: Struggling writer wants success
+- Impossible: Someone writes amazing stories for him anonymously  
+- Denial: He thinks it's a fan, then a collaborator, then realizes it's something else
+- Action: He publishes, gains fame, police come
+- Deeper: The stories match REAL unsolved murders
+- Choice: Stop publishing (lose fame) or continue (help killer?)
+
+This formula works for ANY genre — horror, thriller, mystery, psychological.
