@@ -104,7 +104,8 @@ pick_story() {
 
 # ─── Ask what to generate ─────────────────────────────
 ask_mode() {
-    local name="$1" dir="$BASE_DIR/$name"
+    local name="$1"
+    local dir="$BASE_DIR/$name"
     local has_txt=0; [ -f "$dir/story.txt" ] && has_txt=1
     local has_aud=0; [ -f "$dir/audio.wav" ] && has_aud=1
     local has_img=0
@@ -167,10 +168,16 @@ ask_mode() {
 
 # ─── Generate TTS Audio ────────────────────────────────
 generate_tts() {
-    local name="$1" dir="$BASE_DIR/$name" file="$dir/story.txt" out="$dir/audio.wav"
+    local name="$1"
+    local dir="$BASE_DIR/$name"
+    local file="$dir/story.txt"
+    local out="$dir/audio.wav"
 
     if [ ! -f "$file" ]; then
-        echo -e "${RED}❌ story.txt not found in $dir${NC}"
+        echo -e "${RED}❌ story.txt not found${NC}"
+        echo -e "  dir: $dir"
+        echo -e "  file: $file"
+        ls -la "$dir/" 2>/dev/null || echo "  (dir listing failed)"
         exit 1
     fi
 
@@ -197,10 +204,10 @@ generate_tts() {
     TEXT=$(cat "$file")
     echo "$TEXT" | "$PIPER_BIN" \
         --model "$MODEL_PATH" \
-        --length-scale 1.15 \
-        --noise-scale 0.11 \
-        --noise-w 0.11 \
-        --sentence-silence 0.25 \
+        --length-scale 1.35 \
+        --noise-scale 0.30 \
+        --noise-w 0.30 \
+        --sentence-silence 0.55 \
         --output-file "$out"
 
     local size=$(du -h "$out" | cut -f1)
@@ -209,7 +216,9 @@ generate_tts() {
 
 # ─── Generate Video ────────────────────────────────────
 generate_video() {
-    local name="$1" dir="$BASE_DIR/$name" out="$dir/video.mp4"
+    local name="$1"
+    local dir="$BASE_DIR/$name"
+    local out="$dir/video.mp4"
 
     local img=""
     for f in "$dir"/thumbnail.*; do [ -f "$f" ] && img="$f" && break; done
